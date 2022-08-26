@@ -235,6 +235,7 @@ img {
 }
 
 .section {
+  height: 100vh;
   min-height: 652px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -299,9 +300,19 @@ img {
       -ms-flex: 1;
           flex: 1;
   margin-right: 6%;
+  position: relative;
+}
+.benefits__item::before {
+  content: url(../img/icons/shapes.svg);
+  position: absolute;
+  left: 97%;
+  top: 21%;
 }
 .benefits__item:last-child {
   margin-right: 0;
+}
+.benefits__item:last-child::before {
+  display: none;
 }
 
 .benefit {
