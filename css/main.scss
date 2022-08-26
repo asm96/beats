@@ -4,7 +4,7 @@ $baseFontSize: 16px;
 // color
 $light: #F5F5F5;
 $red: #E01F3D;
-$body: #666;
+$grey: #666;
 $black: #292929;
 
 // normalize
@@ -21,3 +21,9 @@ $black: #292929;
 @import 'components/phone-number';
 @import 'components/btn';
 @import 'components/features';
+@import 'components/section';
+@import 'components/headline-section';
+@import 'components/benefits';
+@import 'components/reviews-section';
+@import 'components/interactive-avatar';
+@import 'components/order-section';

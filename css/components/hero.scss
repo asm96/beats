@@ -1,6 +1,7 @@
 .hero {
   height: 100vh;
-  background: url(../../img/bg/headphones.png) right 16% center no-repeat;
+  min-height: 652px;
+  background: url(../img/bg/headphones.png) right 16% center no-repeat;
   background-color: $light;
   position: relative;
   &::after {
