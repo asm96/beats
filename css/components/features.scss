@@ -1,0 +1,19 @@
+.features, .feature {
+  display: flex;
+  align-items: center;
+}
+
+.feature {
+  width: 166px;
+  min-height: 56px;
+  margin-right: 10px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.feature__icon {
+  margin-right: 11px;
+  width: 49px;
+  height: 49px;
+}

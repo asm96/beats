@@ -1,0 +1,20 @@
+.menu__list {
+  display: flex;
+  align-items: center;
+}
+
+.menu__item {
+  color: $black;
+  margin-right: 27px;
+  transition: color .3s;
+  &:last-child {
+    margin-right: 0;
+  }
+  &:hover {
+    color: $red;
+  }
+}
+
+.menu__link {
+  text-decoration: none;
+}

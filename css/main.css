@@ -1,0 +1,233 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap");
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Play", sans-serif;
+  line-height: 1.42;
+}
+
+.wrapper {
+  min-height: 100%;
+  min-width: 960px;
+  overflow: hidden;
+}
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  font-weight: normal;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+p {
+  margin-top: 0;
+}
+
+a {
+  color: inherit;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.hero {
+  height: 100vh;
+  background: url(../../img/bg/headphones.png) right 16% center no-repeat;
+  background-color: #F5F5F5;
+  position: relative;
+}
+.hero::after {
+  content: "";
+  width: 46px;
+  height: 10px;
+  background-color: #C4C4C4;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  position: absolute;
+  right: 11%;
+}
+
+.hero__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+  padding-bottom: 50px;
+}
+
+.hero__title-section {
+  width: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 70px;
+}
+
+.hero__main-title {
+  font-weight: 700;
+  font-size: 48px;
+  text-transform: uppercase;
+  line-height: 1.08;
+  margin-bottom: 22px;
+}
+
+.hero__title-desc {
+  font-size: 21px;
+  line-height: 1.2;
+  margin-bottom: 34px;
+}
+
+.hero__icons-section {
+  line-height: 1.12;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 24px 0;
+}
+
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu__item {
+  color: #292929;
+  margin-right: 27px;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+.menu__item:last-child {
+  margin-right: 0;
+}
+.menu__item:hover {
+  color: #E01F3D;
+}
+
+.menu__link {
+  text-decoration: none;
+}
+
+.phone-number {
+  text-decoration: none;
+  font-size: 18px;
+  margin-right: 26px;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+.phone-number:hover {
+  color: #E01F3D;
+}
+
+.btn {
+  display: block;
+  padding: 15px 37px;
+  background: #E01F3D;
+  border-radius: 100px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+.btn:hover {
+  background-color: #CA1B36;
+}
+
+.features, .feature {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.feature {
+  width: 166px;
+  min-height: 56px;
+  margin-right: 10px;
+}
+.feature:last-child {
+  margin-right: 0;
+}
+
+.feature__icon {
+  margin-right: 11px;
+  width: 49px;
+  height: 49px;
+}

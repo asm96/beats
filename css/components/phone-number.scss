@@ -1,0 +1,9 @@
+.phone-number {
+  text-decoration: none;
+  font-size: 18px;
+  margin-right: 26px;
+  transition: color .3s;
+  &:hover {
+    color: $red;
+  }
+}
