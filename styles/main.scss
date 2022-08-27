@@ -1,20 +1,7 @@
-$containerWidth: 940px;
-$baseFontSize: 16px;
-
-// color
-$light: #F5F5F5;
-$red: #E01F3D;
-$grey: #666;
-$black: #292929;
-
-// normalize
 @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
-
-// setup
 @import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
-@import 'layout';
-
-//components
+@import 'components/vars';
+@import 'components/layout';
 @import 'components/hero';
 @import 'components/header';
 @import 'components/menu';
