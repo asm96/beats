@@ -1,6 +1,11 @@
 .benefits {
   display: flex;
   align-items: flex-start;
+
+  @include phone {
+    flex-direction: column;
+    align-items: stretch;
+  }
 }
 
 .benefits__item {
@@ -8,11 +13,24 @@
   margin-right: 6%;
   position: relative;
 
+  @include tablet {
+    margin-right: 2%;
+  }
+
+  @include phone {
+    margin-right: 0;
+    margin-bottom: rem(31px);
+  }
+
   &::before {
     content: url(../img/icons/shapes.svg);
     position: absolute;
     left: 97%;
     top: 21%;
+
+    @include tablet {
+      display: none;
+    }
   }
 
   &:last-child {

@@ -1,14 +1,15 @@
 .btn {
   display: block;
-  padding: 16px 41px;
+  padding: rem(16px) rem(41px);
   background: $red;
-  border-radius: 100px;
+  border-radius: rem(100px);
   border: none;
   color: #fff;
   font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
   transition: background-color .3s, color .3s;
+
   &:hover {
     background-color: #CA1B36;
   }
@@ -17,6 +18,7 @@
     background-color: transparent;
     text-transform: none;
     font-weight: 400;
+
     &:hover {
       color: $red;
       background-color: transparent;

@@ -1,35 +1,53 @@
 .benefit {
-  width: 276px;
   text-align: center;
+
+  @include phone {
+    display: flex;
+    text-align: start;
+  }
 }
 
 .benefit__img {
-  margin-bottom: 22px;
+  margin-bottom: rem(22px);
+
+  @include phone {
+    margin-bottom: 0;
+  }
 }
 
 .benefit__img-wrapper {
-  width: 128px;
-  height: 128px;
+  width: rem(128px);
+  height: rem(128px);
   margin: 0 auto;
   background: #F2F5F4;
   border-radius: 50%;
   overflow: hidden;
   position: relative;
+
+  @include phone {
+    margin-right: rem(20px);
+  }
 }
 
 .benefit__icon {
-  width: 68px;
-  height: 68px;
+  width: rem(68px);
+  height: rem(68px);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
+.benefit__text {
+  @include phone {
+    flex: 1;
+  }
+}
+
 .benefit__title {
   font-weight: 700;
-  font-size: 24px;
-  margin-bottom: 3px;
+  font-size: rem(24px);
+  margin-bottom: rem(3px);
 }
 
 .benefit__desc {

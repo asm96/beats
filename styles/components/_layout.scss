@@ -6,6 +6,15 @@
 
 html {
   box-sizing: border-box;
+  font-size: $baseFontSize;
+
+  @include tablet {
+    font-size: $baseFontSize - 1px;
+  }
+
+  @include phone {
+    font-size: $baseFontSize - 2px;
+  }
 }
 
 html,
@@ -14,20 +23,20 @@ body {
 }
 
 body {
-  font-size: $baseFontSize;
   font-family: 'Play', sans-serif;
   line-height: 1.42;
   color: $black;
 }
 
 .wrapper {
+  width: 100%;
   min-height: 100%;
-  min-width: $containerWidth + 20px;
   overflow: hidden;
 }
 
 .container {
-  width: $containerWidth;
+  width: 95%;
+  max-width: $containerWidth;
   margin: 0 auto;
 }
 
@@ -63,6 +72,7 @@ a {
 ul {
   padding: 0;
   margin: 0;
+
   li {
     list-style: none;
   }

@@ -1,6 +1,6 @@
 .section {
   height: 100vh;
-  min-height: 652px;
+  min-height: rem(652px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,7 +8,7 @@
 
 .section__title {
   text-transform: uppercase;
-  font-size: 48px;
+  font-size: rem(48px);
   font-weight: 700;
   text-align: center;
 }
@@ -18,4 +18,8 @@
   text-align: center;
   line-height: 1.16;
   padding: 0 20%;
+
+  @include phone {
+    padding: 0 6%;
+  }
 }

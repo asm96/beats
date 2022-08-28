@@ -1,19 +1,21 @@
-.features, .feature {
+.features,
+.feature {
   display: flex;
   align-items: center;
 }
 
 .feature {
-  width: 166px;
-  min-height: 56px;
-  margin-right: 10px;
+  max-width: rem(166px);
+  min-height: rem(56px);
+  margin-right: rem(10px);
+
   &:last-child {
     margin-right: 0;
   }
 }
 
 .feature__icon {
-  margin-right: 11px;
-  width: 49px;
-  height: 49px;
+  margin-right: rem(11px);
+  width: rem(49px);
+  height: rem(49px);
 }

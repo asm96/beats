@@ -3,6 +3,10 @@
   color: #fff;
 
   .section__title {
-    margin-bottom: 47px;
+    margin-bottom: rem(47px);
+
+    @include tablet {
+      margin-bottom: rem(25px);
+    }
   }
 }

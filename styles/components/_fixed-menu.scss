@@ -2,10 +2,14 @@
   position: fixed;
   top: 31%;
   right: 4%;
+
+  @include tablet {
+    display: none;
+  }
 }
 
 .fixed-menu__item {
-  margin-bottom: 5px;
+  margin-bottom: rem(5px);
 
   &_active {
     .fixed-menu__link {
@@ -20,10 +24,10 @@
 
 .fixed-menu__link {
   display: block;
-  width: 16px;
-  height: 16px;
+  width: rem(16px);
+  height: rem(16px);
   border-radius: 50%;
-  border: 1px solid transparent;
+  border: rem(1px) solid transparent;
   position: relative;
   transition: border-color .3s;
 
@@ -33,10 +37,10 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 6px;
-    height: 6px;
+    width: rem(6px);
+    height: rem(6px);
     border-radius: 50%;
-    background-color: $black;
+    background-color: $grey;
     transition: background-color .3s;
   }
 }
