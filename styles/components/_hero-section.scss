@@ -1,5 +1,10 @@
 .hero-section {
-  background: url(../img/bg/headphones.png) right 16% center no-repeat;
+  @media (min-width: 768px) {
+    background-image: url(../img/bg/headphones.png);
+    background-position: right 16% center;
+    background-repeat: no-repeat;
+  }
+
   background-color: $light;
   position: relative;
 
@@ -12,10 +17,6 @@
     position: absolute;
     right: 11%;
     top: 99%;
-  }
-
-  @include tablet {
-    background: $light;
   }
 }
 
@@ -62,7 +63,7 @@
   }
 
   @include phone {
-    font-size: 32px;
+    font-size: rem(37px);
   }
 }
 

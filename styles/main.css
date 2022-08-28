@@ -123,9 +123,15 @@ img {
 }
 
 .hero-section {
-  background: url(../img/bg/headphones.png) right 16% center no-repeat;
   background-color: #F5F5F5;
   position: relative;
+}
+@media (min-width: 768px) {
+  .hero-section {
+    background-image: url(../img/bg/headphones.png);
+    background-position: right 16% center;
+    background-repeat: no-repeat;
+  }
 }
 .hero-section::after {
   content: "";
@@ -137,11 +143,6 @@ img {
   position: absolute;
   right: 11%;
   top: 99%;
-}
-@media (max-width: 768px) {
-  .hero-section {
-    background: #F5F5F5;
-  }
 }
 
 .hero-section__container {
@@ -207,7 +208,7 @@ img {
 }
 @media (max-width: 480px) {
   .hero-section__title {
-    font-size: 32px;
+    font-size: 2.3125rem;
   }
 }
 
@@ -245,10 +246,18 @@ img {
   padding: 1.5rem 0;
 }
 
+.header__phone-number {
+  margin-right: 1.625rem;
+  padding-top: 0.625rem;
+}
 @media (max-width: 768px) {
   .header__phone-number {
     display: none;
   }
+}
+
+.logo {
+  color: #E01F3D;
 }
 
 .menu {
@@ -297,8 +306,6 @@ img {
   text-decoration: none;
   white-space: nowrap;
   font-size: 1.125rem;
-  margin-right: 1.625rem;
-  padding-top: 0.625rem;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
 }
@@ -852,7 +859,7 @@ img {
   border-radius: 0.25rem;
 }
 .radio_checkbox .radio__visible::before {
-  background: url(../img/icons/checkmark.svg) center center no-repeat;
+  background: url(../img/icons/checkmark.svg) center center/contain no-repeat;
 }
 
 .radio__elem {
@@ -884,6 +891,113 @@ img {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.map-section {
+  background: url(../img/content/map.png) top center/cover no-repeat;
+  position: relative;
+}
+
+.map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.125rem 0;
+  background: #fff;
+}
+@media (max-width: 768px) {
+  .footer {
+    padding: 1.6875rem 0;
+  }
+}
+
+.footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media (max-width: 480px) {
+  .footer__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.footer__phone-number {
+  margin-bottom: 0.625rem;
+}
+
+.contacts {
+  font-style: normal;
+  font-size: 1.125rem;
+}
+@media (max-width: 768px) {
+  .contacts {
+    font-size: 1.3125rem;
+  }
+}
+@media (max-width: 480px) {
+  .contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 0.4375rem;
+  }
+}
+
+.contacts__place {
+  white-space: nowrap;
+}
+@media (max-width: 480px) {
+  .contacts__place {
+    margin-bottom: 0.4375rem;
+  }
+}
+
+.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.social__item {
+  margin-right: 0.625rem;
+}
+.social__item:last-child {
+  margin-right: 0;
+}
+
+.social__icon {
+  color: #B3B3B3;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+.social__icon:hover {
+  color: #000;
 }
 
 .fixed-menu {
