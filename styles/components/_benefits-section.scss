@@ -1,0 +1,32 @@
+.benefits-section {
+  position: relative;
+
+  .section__title {
+    margin-bottom: rem(10px);
+
+    @include phone {
+      font-size: rem(35px);
+    }
+  }
+
+  .section__subtitle {
+    margin-bottom: rem(62px);
+
+    @include phone {
+      margin-bottom: rem(30px);
+    }
+  }
+
+  &::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border: rem(19px) solid transparent;
+    border-bottom-width: rem(34px);
+    border-bottom-color: $red;
+    transform: rotate(-13deg);
+    position: absolute;
+    top: 94%;
+    left: 5%;
+  }
+}
