@@ -1,6 +1,7 @@
 .menu {
   margin: 0 rem(30px);
   padding-top: rem(10px);
+  color: $black;
 
   @include tablet {
     display: none;
@@ -15,7 +16,6 @@
 }
 
 .menu__item {
-  color: $black;
   margin-right: rem(27px);
   transition: color .3s;
 
@@ -31,4 +31,24 @@
 .menu__link {
   text-decoration: none;
   white-space: nowrap;
+}
+
+.menu_vertical {
+  display: block;
+  font-size: rem(36px);
+  color: #fff;
+  text-align: center;
+
+  .menu__list {
+    flex-direction: column;
+  }
+
+  .menu__item {
+    margin-right: 0;
+    margin-bottom: rem(26px);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }

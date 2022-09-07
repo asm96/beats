@@ -6,7 +6,7 @@
   border: rem(4px) solid transparent;
   transition: border-color .3s;
 
-  &_active {
+  &.active {
     border-color: $red;
   }
 
