@@ -1,0 +1,12 @@
+.order-section {
+  background: #181818;
+  color: #fff;
+
+  .section__title {
+    margin-bottom: 47px;
+
+    @include tablet {
+      margin-bottom: 25px;
+    }
+  }
+}

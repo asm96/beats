@@ -1,0 +1,18 @@
+.reviews-section {
+  position: relative;
+
+  .section__title {
+    margin-bottom: 24px;
+  }
+
+  &::before {
+    content: "";
+    width: 35px;
+    height: 35px;
+    background: #868686;
+    border-radius: 50%;
+    position: absolute;
+    top: 98%;
+    left: 7%;
+  }
+}

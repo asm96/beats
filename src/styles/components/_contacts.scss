@@ -1,0 +1,23 @@
+.contacts {
+  font-style: normal;
+  font-size: 18px;
+
+  @include tablet {
+    font-size: 21px;
+  }
+
+  @include phone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 7px;
+  }
+}
+
+.contacts__place {
+  white-space: nowrap;
+
+  @include phone {
+    margin-bottom: 7px;
+  }
+}

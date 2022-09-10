@@ -1,0 +1,17 @@
+.benefits-section {
+  .section__title {
+    margin-bottom: 10px;
+
+    @include phone {
+      font-size: 35px;
+    }
+  }
+
+  .section__subtitle {
+    margin-bottom: 62px;
+
+    @include phone {
+      margin-bottom: 30px;
+    }
+  }
+}
