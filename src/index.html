@@ -114,6 +114,9 @@
                     могли пользоваться ими каждый день.</p>
                 </div>
               </div>
+              <svg width="67" height="21" class="benefit__shapes" role="img" aria-label="Shapes">
+                <use xlink:href="./img/icons/sprite.svg#shapes"></use>
+              </svg>
             </li>
             <li class="benefits__item benefit">
               <div class="benefit__img">
@@ -132,6 +135,9 @@
                     куда бы вы ни отправились.</p>
                 </div>
               </div>
+              <svg width="67" height="21" class="benefit__shapes" role="img" aria-label="Shapes">
+                <use xlink:href="./img/icons/sprite.svg#shapes"></use>
+              </svg>
             </li>
             <li class="benefits__item benefit">
               <div class="benefit__img">
@@ -149,6 +155,9 @@
                     сможете слушать музыку ещё 3 часа.</p>
                 </div>
               </div>
+              <svg width="67" height="21" class="benefit__shapes" role="img" aria-label="Shapes">
+                <use xlink:href="./img/icons/sprite.svg#shapes"></use>
+              </svg>
             </li>
           </ul>
         </div>
@@ -557,6 +566,39 @@
           </div>
         </div>
       </section>
+      <section class="section player-section">
+        <div class="container">
+          <h2 class="section__title">Как мы работаем</h2>
+          <div class="player-section__container">
+            <div class="player">
+              <div class="player__wrapper">
+                <video class="player__elem"></video>
+                <!-- <div id="yt-player" class="player__elem"></div> -->
+                <div class="player__splash">
+                  <svg class="player__splash-button" width="49" height="71" role="img" aria-label="Splashscreen play button">
+                    <use xlink:href="./img/icons/sprite.svg#play"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="player__controls">
+                <a href="#" class="player__start">
+                  <svg width="11" height="18" role="img" aria-label="Play button">
+                    <use class="player__start-icon" xlink:href="./img/icons/sprite.svg#play"></use>
+                    <use class="player__start-icon_active" xlink:href="./img/icons/sprite.svg#pause"></use>
+                  </svg>
+                </a>
+                <div class="player__playback">
+                  <button class="player__playback-button"></button>
+                </div>
+                <div class="player__duration">
+                  <span class="player__duration-completed">00:00</span>
+                  <span class="player__duration-estimate">00:00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section class="section order-section">
         <div class="container">
           <h2 class="section__title">Закажите доставку</h2>
@@ -755,6 +797,7 @@
       </nav>
     </div>
   </div>
+  <!-- <script src="https://www.youtube.com/iframe_api"></script> -->
   <script src="main.min.js"></script>
 </body>
 

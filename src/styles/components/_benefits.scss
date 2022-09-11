@@ -22,22 +22,22 @@
     margin-bottom: 31px;
   }
 
-  &::before {
-    content: url(../img/icons/shapes.svg);
-    position: absolute;
-    left: 97%;
-    top: 21%;
-
-    @include tablet {
-      display: none;
-    }
-  }
-
   &:last-child {
     margin-right: 0;
 
-    &::before {
+    .benefit__shapes {
       display: none;
     }
+  }
+}
+
+.benefit__shapes {
+  position: absolute;
+  left: 97%;
+  top: 19%;
+  fill: #F2F5F4;
+
+  @include tablet {
+    display: none;
   }
 }
