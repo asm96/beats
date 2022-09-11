@@ -1,0 +1,21 @@
+.products-menu-section {
+  background: url(./img/bg/girl.png) left 107% center / cover no-repeat;
+  color: #fff;
+  position: relative;
+
+  .section__title {
+    position: absolute;
+    top: 14%;
+    left: 8%;
+
+    @include tablet {
+      left: 5%;
+      font-size: 40px;
+    }
+
+    @include phone {
+      left: 1%;
+      font-size: 32px;
+    }
+  }
+}
