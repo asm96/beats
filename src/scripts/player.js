@@ -1,6 +1,6 @@
 (function () {
   const player = document.querySelector('.player__elem');
-  player.src = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4";
+  player.src = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4";
   player.poster = './img/content/splashscreen.png';
   const playerContainer = $('.player');
   const playbackButton = $('.player__playback-button');
