@@ -2,24 +2,35 @@
   position: fixed;
   top: 31%;
   right: 4%;
+  color: $grey;
+
+  .fixed-menu__item.active {
+    color: $red;
+
+    .fixed-menu__link {
+      border-color: currentColor;
+    }
+  }
 
   @include tablet {
     display: none;
   }
 }
 
-.fixed-menu__item {
-  margin-bottom: 5px;
+.fixed-menu.light {
+  color: #fff;
 
-  &_active {
-    .fixed-menu__link {
-      border-color: $red;
+  .fixed-menu__item.active {
+    color: currentColor;
 
-      &::before {
-        background-color: $red;
-      }
+    .fixed-menu__link:hover {
+      border-color: currentColor;
     }
   }
+}
+
+.fixed-menu__item {
+  margin-bottom: 5px;
 }
 
 .fixed-menu__link {
@@ -29,7 +40,11 @@
   border-radius: 50%;
   border: 1px solid transparent;
   position: relative;
-  transition: border-color .3s;
+  transition: border-color .1s;
+
+  &:hover {
+    border-color: currentColor;
+  }
 
   &::before {
     content: "";
@@ -40,7 +55,7 @@
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background-color: $grey;
-    transition: background-color .3s;
+    background-color: currentColor;
+    transition: background-color .1s;
   }
 }
