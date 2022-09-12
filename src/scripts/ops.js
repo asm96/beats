@@ -33,8 +33,8 @@
     if (inScroll) return;
 
     inScroll = true;
-    // const transitionOver = 1000;
-    // const mouseInertiaOver = 300;
+    const transitionOver = 1000;
+    const mouseInertiaOver = 300;
     const position = countSelectionPosition(sectionEq);
 
     display.css('transform', `translateY(${position}%)`);
@@ -42,15 +42,14 @@
     changeMenuThemeForSection(sectionEq);
     resetActiveClassForItem(sections, sectionEq, 'active');
 
-    display.on('transitionend', (e) => {
-      e.stopImmediatePropagation;
+    setTimeout(() => {
       inScroll = false;
       resetActiveClassForItem(menuItems, sectionEq, 'active');
-    });
-    // setTimeout(() => {
+    }, transitionOver + mouseInertiaOver);
+    // display.on('transitionend', () => {
     //   inScroll = false;
     //   resetActiveClassForItem(menuItems, sectionEq, 'active');
-    // }, transitionOver + mouseInertiaOver);
+    // });
   };
 
   const viewportScroller = () => {
@@ -115,9 +114,9 @@
   if (isMobile) {
     // https://github.com/mattbryson/TouchSwipe-Jquery-Plugin
     $("body").swipe({
-      swipe: function (event, direction) {
+      swipe(e, direction) {
         const scroller = viewportScroller();
-        let scrollDirection = ''
+        let scrollDirection = '';
         if (direction == 'up') scrollDirection = 'next';
         if (direction == 'down') scrollDirection = 'prev';
         scroller[scrollDirection]();
