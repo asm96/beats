@@ -29,12 +29,18 @@ task('copy:html', () => {
     .pipe(reload({ stream: true }));
 });
 
+task('copy:ico', () => {
+  return src(`${SRC_PATH}/*.ico`)
+    .pipe(dest(DIST_PATH))
+    .pipe(reload({ stream: true }));
+});
+
 task('copy:img', () => {
   return src([
     `${SRC_PATH}/img/**/*`,
     `!${SRC_PATH}/img/icons/*`,
     `!${SRC_PATH}/img/{figma,figma/**}`,
-])
+  ])
     .pipe(dest(`${DIST_PATH}/img`))
     .pipe(reload({ stream: true }));
 });
@@ -108,8 +114,8 @@ task('watch', () => {
 });
 
 task('default', series('clean',
-  parallel('copy:html', 'copy:img', 'styles', 'scripts', 'icons'),
+  parallel('copy:html', 'copy:img', 'copy:ico', 'styles', 'scripts', 'icons'),
   parallel('watch', 'server')));
 
 task('build', series('clean',
-  parallel('copy:html', 'copy:img', 'styles', 'scripts', 'icons')));
+  parallel('copy:html', 'copy:img', 'copy:ico', 'styles', 'scripts', 'icons')));

@@ -1,10 +1,14 @@
 (function () {
   const player = document.querySelector('.player__elem');
   player.src = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4";
+  player.poster = './img/content/splashscreen.png';
   const playerContainer = $('.player');
   const playbackButton = $('.player__playback-button');
+  const soundRangeButton = $('.player__sound-range-button');
   const durationEstimate = $('.player__duration-estimate');
   const durationCompleted = $('.player__duration-completed');
+  let currentSoundButtonPosition = '';
+  let currentVolume = 0;
 
   $('.player__start').on('click', e => {
     e.preventDefault();
@@ -17,7 +21,7 @@
     }
   });
 
-  $('.player__splash').on('click', () => {
+  $('.player__splash-button').on('click', () => {
     playerContainer.addClass("active");
     player.play();
   });
@@ -30,6 +34,31 @@
 
     playbackButton.css('left', `${newButtonPositionPersent}%`);
     player.currentTime = newPlaybackPositionSec;
+  });
+
+  $('.player__sound-range').on('click', e => {
+    const bar = $(e.currentTarget);
+    const clickedPosition = e.originalEvent.layerX;
+    const soundLevel = clickedPosition / bar.width();
+
+    soundRangeButton.css('left', `${clickedPosition}px`);
+    player.volume = soundLevel;
+  });
+
+  $('.player__sound').on('click', e => {
+    const $this = $(e.currentTarget);
+
+    if ($this.hasClass('muted')) {
+      soundRangeButton.css('left', currentSoundButtonPosition);
+      player.volume = currentVolume;
+      $this.removeClass('muted');
+    } else {
+      currentSoundButtonPosition = soundRangeButton.css('left');
+      currentVolume = player.volume;
+      soundRangeButton.css('left', 0);
+      player.volume = 0;
+      $this.addClass('muted');
+    }
   });
 
   const formatTime = timeSec => {

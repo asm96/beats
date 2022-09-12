@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Beats</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="main.min.css">
 </head>
 
@@ -615,12 +616,10 @@
               <div class="player__wrapper">
                 <video class="player__elem"></video>
                 <!-- <div id="yt-player" class="player__elem"></div> -->
-                <div class="player__splash">
-                  <svg class="player__splash-button" width="49" height="71" role="img"
-                    aria-label="Splashscreen play button">
-                    <use xlink:href="./img/icons/sprite.svg#play"></use>
-                  </svg>
-                </div>
+                <svg class="player__splash-button" width="49" height="71" role="img"
+                  aria-label="Splashscreen play button">
+                  <use xlink:href="./img/icons/sprite.svg#play"></use>
+                </svg>
               </div>
               <div class="player__controls">
                 <a href="#" class="player__start">
@@ -631,6 +630,14 @@
                 </a>
                 <div class="player__playback">
                   <button class="player__playback-button"></button>
+                </div>
+                <a href="#" class="player__sound">
+                  <svg width="14" height="17" role="img" aria-label="Sound button">
+                    <use class="player__sound-icon" xlink:href="./img/icons/sprite.svg#sound"></use>
+                  </svg>
+                </a>
+                <div class="player__sound-range">
+                  <button class="player__sound-range-button"></button>
                 </div>
                 <div class="player__duration">
                   <span class="player__duration-completed">00:00</span>

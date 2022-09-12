@@ -12,8 +12,9 @@
       display: inline;
     }
 
-    .player__splash {
-      display: none;
+    .player__splash-button {
+      opacity: 0;
+      pointer-events: none;
     }
   }
 }
@@ -25,25 +26,20 @@
 .player__elem {
   width: 100%;
   height: 100%;
+  object-fit: cover;
   cursor: pointer;
 }
 
-.player__splash {
+.player__splash-button {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url(./img/content/splashscreen.png) center center/cover no-repeat;
   cursor: pointer;
-
-  .player__splash-button {
-    position: absolute;
-    fill: #fff;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+  pointer-events: auto;
+  fill: #fff;
+  opacity: 1;
+  top: 50%;
+  left: 50%;
+  transition: opacity .2s;
+  transform: translate(-50%, -50%);
 }
 
 .player__controls {
@@ -73,34 +69,80 @@
 }
 
 .player__playback {
-  height: 16px;
   position: relative;
   flex: 1;
-  margin: 0 15px;
+  height: 16px;
+  margin: 0 17px;
   cursor: pointer;
 
   &:before {
     content: "";
-    height: 4px;
     position: absolute;
     top: 50%;
     left: 0;
     right: 0;
+    transform: translateY(-50%);
+    height: 4px;
     background: #333;
     border-radius: 1px;
     display: block;
-    transform: translateY(-50%);
   }
 }
 
 .player__playback-button {
-  background: $red;
-  border-radius: 50%;
-  width: 12px;
-  height: 12px;
-  padding: 0;
   position: absolute;
   top: 50%;
   left: 0;
   transform: translate(-50%, -50%);
+  background-color: $red;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  transition: left .2s;
+}
+
+.player__sound {
+  display: flex;
+  align-items: center;
+  fill: #fff;
+  transition: fill .3s;
+
+  &.muted {
+    fill: $grey;
+  }
+}
+
+.player__sound-range {
+  position: relative;
+  height: 16px;
+  width: 62px;
+  margin: 0 17px;
+  cursor: pointer;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    background: #333;
+    border-radius: 1px;
+    display: block;
+  }
+}
+
+.player__sound-range-button {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  transition: left .2s;
+  background-color: $red;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  padding: 0;
 }
